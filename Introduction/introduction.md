@@ -36,4 +36,4 @@ Rust ရဲ့ ownership နဲ့ memory safety rules တွေကဆိုရ�
 
 <hr>
 
-[next. Installation](./Ch01/part_01_installation.md)
+[next. Installation](../Ch01/part_01_installation.md)
