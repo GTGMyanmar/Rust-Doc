@@ -39,6 +39,6 @@ Windows user တွေအနေနဲ့ [installနည်းကိုဒီမ�
 
 <hr>
 
-[prev. Introduction](https://github.com/GTGMyanmar/Rust-Doc/blob/main/Introduction/introduction.md)
+[prev. Introduction](../Introduction/introduction.md)
 
-[next. Hello, World!](https://github.com/GTGMyanmar/Rust-Doc/blob/main/CH01/part_02_hello.md)
+[next. Hello, World!](../CH01/part_02_hello.md)
