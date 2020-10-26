@@ -145,8 +145,10 @@ Hello, world!
 
 Github ပေါ်က rust projectတွေလည်းကို clone ပြီး cargo command သုံး၍ compile ပြီးတော့ အသုံးပြုနိုင်ပါသေးတယ်။
 
-ဆက်လက်ပြီးတော့ Rust ရဲ့ basic data types တွေကိုလေ့လာကြရအောင်။
+ဆက်လက်ပြီးတော့ programming အခြေခံသဘောတရားများနှင့် Rust ရဲ့ basic data types တွေကိုလေ့လာကြရအောင်။
 
 <hr>
 
 [prev. Installation](./part_01_installation.md)
+
+[next. Programming အခြေခံသဘောတရားများ](../CH02/Programmingအခြေခံသဘောတရားများ.md)
