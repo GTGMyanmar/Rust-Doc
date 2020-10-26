@@ -133,3 +133,20 @@ Hello, world!
 
 ## Development and Release Profile
 
+`cargo build` ရဲ့ output ကိုကြည့်ကြည့်ရအောင်။
+
+```console
+(base) aung@aung:~/col/rust/Rust-Doc/code/hello-world$ cargo build
+   Compiling hello-world v0.1.0 (/home/aung/col/rust/Rust-Doc/code/hello-world)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.81s
+```
+
+နောက်ဆုံးအကြောင်းမှာ `Finished dev [unoptimized + debuginfo]` ဆိုတာကိုတွေ့ရပါလိမ့်မယ်။ Cargo မှာ _developement_ နဲ့ _release_ ဆိုတဲ့ profile နှစ်ခုရှိပါတယ်။ Development profile မှာက compilation speed မြန််ဖို့အတွက် optimization တွေကိုလျော့ချထားပါတယ်။ တကယ်လို့သင်သာသင့် project ကိုလက်တွေ့အသုံးချဖို့အတွက် compile မယ်ဆို `cargo build --release` ဆိုပြီး compile သင့်ပါတယ်။ ဒီ command ကသင့် project performance အတွက် လိုအပ်တဲ့ optimization တွေကိုအလိုလျောက်ထည့်ပေါင်းပေးမှာဖြစ်ပါတယ်။
+
+Github ပေါ်က rust projectတွေလည်းကို clone ပြီး cargo command သုံး၍ compile ပြီးတော့ အသုံးပြုနိုင်ပါသေးတယ်။
+
+ဆက်လက်ပြီးတော့ Rust ရဲ့ basic data types တွေကိုလေ့လာကြရအောင်။
+
+<hr>
+
+[pre. Installation](./part_01_installation.md)
