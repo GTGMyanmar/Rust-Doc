@@ -149,4 +149,4 @@ Github ပေါ်က rust projectတွေလည်းကို clone ပြ�
 
 <hr>
 
-[pre. Installation](./part_01_installation.md)
+[prev. Installation](./part_01_installation.md)
