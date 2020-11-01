@@ -1,6 +1,8 @@
 # Rust-Doc
 
-Introduction to Rust Programming By Greentech Inc
+## Introduction to Rust Programming By Greentech Inc.
+
+__This project is under development. There may be some errors. Contribution and suggestion are warmly welcome.__
 
 1. [Introduction](./Introduction/introduction.md)
 2. Chapter_1
