@@ -94,3 +94,37 @@ fn main() {
 ```
 
 ## Shadowing
+
+```Rust
+fn main() {
+  let x = 5;
+  let x = x + 5;
+
+  println!("x: {}", x);
+```
+
+Variable ကိုကြေညာတဲ့ နေရာမှာ `mut` ကိုမသုံးဘဲ ဒီလိုမျိုး declare ကြည့်ကြလိမ့်မယ်လို့ထင်ပါတယ်။ ဒီ variable မျိုးကို _shadowing_ လို့ခေါ်ပါတယ်။ ရှိပြီးသား `x` ကိုမှထပ်ပြီးတော့ တစ်ဆင့် declare လိုက်တာပါ။ ကွာခြားချက်ကိုသိရဖို့အတွက်အောက်က code ကိုအရင်ကြည့်ကြည့်လိုက်ပါ။
+
+```Rust
+fn main() {
+  let mut x = 5;
+  x = 5.2;
+}
+```
+
+ဒီ code မျိုးဆို error တက်ပါလိမ့်မယ်။ ဘာလို့လဲဆိုတော့ integer ဖြစ်တဲ့ `x` ထဲက တန်ဖိုး `5`ကိုထုတ်ပြီးတော့ floating point `5.2` ထည့်လိုက်လို့ပါ။
+
+```Rust
+fn main() {
+  let x = 5;
+  let x = 5.2;
+}
+```
+
+ဒီလိုမျိုးကိုတော့ Rust က compile ပေးပါလိမ့်မယ်။ ဘာကြောင့်လဲဆိုတော့ integer type variable ဖြစ်တဲ့ `x` ကို နာမည်တူတဲ့ floating point type variable ဖြစ်တဲ့ `x`နဲ့ _shadow_ လိုက်လို့ပါ။ 
+
+Variable တွေအကြောင်းကိုနားလည်လောက်ပြီဆိုတော့ Rust ထဲက __Data Types__ အကြောင်းတွေကိုဆက်လေ့လာကြည့်ရအောင်။
+
+<hr>
+
+[prev. Hello, World!](../CH01/part_02_hello.md)
