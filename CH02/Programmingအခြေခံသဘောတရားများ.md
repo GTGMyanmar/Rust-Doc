@@ -68,3 +68,29 @@ fn main() {
     println!("The value of x is: {}", x);
 }
 ```
+
+ဒီ code ကို run ရင် အောက်ကအတိုင်းထွက်လာပါလိမ့်မယ်။ 
+
+```console
+$ cargo run
+   Compiling variables v0.1.0 (file:///projects/variables)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.30s
+     Running `target/debug/variables`
+The value of x is: 5
+The value of x is: 6
+```
+
+## Constant
+
+တခြား programming language တွေမှာဆိုရင် _immutable variable_ ဆိုတာနဲ့ constant တွေကိုမြင်မိပါလိမ့်မယ်။ Rust မှာတော့ constant ဆိုတဲ့ type က သီးသန့်ရှိပါတယ်။ constant နဲ့ immutable variable တွေရဲ့ကွာခြားချက်ကတော့ Constant တွေမှာ `mut` keyword ကိုသုံးလို့မရပါဘူး။ Rust မှာ Constant variable တွေက အမြဲ immutable ဖြစ်ပါတယ်။
+
+Constant တွေကိုကြေညာဖို့ `let` အစား `const` ဆိုတဲ့ keyword ကိုသုံးရမှာဖြစ်ပါတယ်။ const variable ရဲ့ type ဖော်ပြချက်ကိုလည်းမဖြစ်မနေထည့်ပေးရပါမယ်။ Constant Variable ကိုတော့ စာလုံးအကြီးတွေနဲ့ပဲဖော်ပြကြပါတယ်။ Constant Variable တွေကို function တွေရဲ့အပြင်ဘက်ဖြစ်တဲ့ global scope မှာပါကြေညာနိုင်ပါတယ်။ သတိထားရမှာက constant variables တွေရဲ့ တန်ဖိုးကို တိုက်ရိုက် _hardcoded_ ထည့်ရမှာဖြစ်ပါတယ် function တို့ method တို့ကနေပြန်ထုတ်ပေးတဲ့တန်ဖိုးမဖြစ်ရပါဘူး။
+
+```Rust
+const SPEED_OF_LIGHT: u32 = 300_000_000;
+fn main() {
+    println!("{}", SPEED_OF_LIGHT);
+}
+```
+
+## Shadowing
