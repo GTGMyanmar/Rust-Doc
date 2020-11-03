@@ -80,6 +80,8 @@ The value of x is: 5
 The value of x is: 6
 ```
 
+> Programming Language များကိုစတင်လေ့လာသူများအနေနှင့် သတိပြုရန်မှာ variable များသည် case sensitive ဖြစ်ကြသည်။ ဆိုလိုသည်မှာ `let name = 5;`, `let Name = 5;`, `let NaMe = 5;` စသည်တို့သည် မတူညီသော variable သုံးခုဖြစ်ကြသည်။
+
 ## Constant
 
 တခြား programming language တွေမှာဆိုရင် _immutable variable_ ဆိုတာနဲ့ constant တွေကိုမြင်မိပါလိမ့်မယ်။ Rust မှာတော့ constant ဆိုတဲ့ type က သီးသန့်ရှိပါတယ်။ constant နဲ့ immutable variable တွေရဲ့ကွာခြားချက်ကတော့ Constant တွေမှာ `mut` keyword ကိုသုံးလို့မရပါဘူး။ Rust မှာ Constant variable တွေက အမြဲ immutable ဖြစ်ပါတယ်။
@@ -128,3 +130,5 @@ Variable တွေအကြောင်းကိုနားလည်လော�
 <hr>
 
 [prev. Hello, World!](../CH01/part_02_hello.md)
+
+[next. Data Types](./DataTypes.md)
