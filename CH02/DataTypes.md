@@ -71,4 +71,17 @@ signed integer တွေကတော့ အပေါင်းအနှုတ်�
 
 > signed integer တွေမှာ ပထမဆုံး bit ကို လက္ခဏာသတ်မှတ်ဖို့ အတွက်ဆိုတာက အလွယ်မှတ်ဖို့ပြောတာဖြစ်ပါတယ်။ တကယ့် binary representation မှာက two's complement နည်းကိုသုံးပြီး encode ထားတာပဲဖြစ်ပါတယ်။
 
-အပေါ်က integer types တွေအပြင် rust မှာ machine ရဲ့ 32bits, 64bits စတဲ့ architecture အလိုက်ပြောင်းနိုင်တဲ့ လကွဏာပါတဲ့ `isize` နဲ့ လကွဏာမပါတဲ့ `usize` integer types တွေလည်းရှိပါတယ်။ ဒီ integer types တွေကိုတော့ array indexing အတွက်တွေ string length စတဲ့ address နဲ့ဆိုင်တဲ့ နေရာတွေမှာသုံးပါတယ်
+အပေါ်က integer types တွေအပြင် rust မှာ machine ရဲ့ 32bits, 64bits စတဲ့ architecture အလိုက်ပြောင်းနိုင်တဲ့ လကွဏာပါတဲ့ `isize` နဲ့ လကွဏာမပါတဲ့ `usize` integer types တွေလည်းရှိပါတယ်။ ဒီ usize types တွေကိုတော့ array indexing တွေ string, arrays length စတဲ့နေရာတွေမှာသုံးပါတယ်။
+ထို့အပြင် hexadecimal format အတွက် `0xff`, octal format အတွက် `0o377`, binary format အတွက် `0b1000_1111` စသည်ဖြင့်ရေးနိုင်ပါတယ်။
+
+များသောအားဖြင့် error တွေအများစုဟာ types တွေကို auto ပြောင်းပြီး operation လုပ်တာတွေကြောင့်အဖြစ်များပါတယ်။ ဒါကြောင့် rust မှာ integer type တွေမတူရင် ပေါင်းနှုတ်မြှောက်စားလို့မရပါဘူး။ (int and float လည်း operation လုပ်လို့မရပါဘူး)။ types တွေပြောင်းဖို့အတွက် `as` operator ကိုသုံးရပါတယ်။ `i32` ကတော့ rust ရဲ့ default integer type ပဲဖြစ်ပါတယ်။
+
+```Rust
+fn main() {
+    let x: i32 = 500;
+    let y = x as u8;
+    let z = 25; // this is i32
+}
+```
+
+integer တွေ operation လုပ်တဲ့ နေရာမှာသတိထားရမှာတစ်ခုကတော့ integer overflow ဖြစ်တာတွေပဲဖြစ်ပါတယ်။ `255_u8` နဲ့ `255_u8` ပေါင်းရင် error တက်ပါလိမ့်မယ်။ `as` operator နဲ့ type cast တာတွေကိုတော့ ခွင့်ပြုပါတယ် ဒါပေမဲ့ rust က _two's completement wrapping_ ကိုသုံးပြီး integer overflow ကိုဖြေရှင်းပါလိမ့်မယ်။ `256_u32 as u8` ဆိုရင် `0`, `257_u32 as u8` ဆိုရင် `1` စသည်ဖြင့်ထုတ်ပေးပါလိမ့်မယ်။ Integer overflow ကိုအပေါ်ကအတိုင်း ဖြေရှင်းတာမျိုးကို error အဖြစ်သတ်မှတ်တာကြောင့် အထက်ပါ လုပ်ဆောင်ချက်ကိုအသုံးပြုချင်တယ်ဆိုရင် rust ရဲ့ standard library ဖြစ်တဲ့ `std::num::Wrapping` ကိုသုံးဖို့ rust team က တိုက်တွန်းထားပါတယ်။
